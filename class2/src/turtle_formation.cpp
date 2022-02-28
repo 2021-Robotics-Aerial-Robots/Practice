@@ -90,7 +90,7 @@ void Positioncontrol(turtlesim::Pose &goal, turtlesim::Pose &follower, geometry_
 
 	// Find the error postion 
 	float error_norm = sqrt(pow(pos_err_I.x, 2) + pow(pos_err_I.y, 2));
-	
+
 	// Find the error theta 
 	float error_theta = atan2(pos_err_I.y,pos_err_I.x);
 
@@ -131,7 +131,6 @@ int main(int argc, char **argv)
 
 		goal2.x = -1;
 		goal2.y = 1;
-		
 		
         // rotate from leader turtle frame to world frame
         leadertoworld( goal1.x, goal1.y , leader);
