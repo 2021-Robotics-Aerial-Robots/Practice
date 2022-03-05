@@ -208,8 +208,11 @@ include_directories(
 add_executable(turtle_more src/turtle_more.cpp)
 target_link_libraries(turtle_more ${catkin_LIBRARIES})
 
-add_executable(turtle_control src/turtle_control.cpp)
-target_link_libraries(turtle_control ${catkin_LIBRARIES})
+add_executable(turtle_keyboard src/turtle_keyboard.cpp)
+target_link_libraries(turtle_keyboard ${catkin_LIBRARIES})
 
 add_executable(turtle_formation src/turtle_formation.cpp)
 target_link_libraries(turtle_formation ${catkin_LIBRARIES})
+
+add_executable(turtle_Pcontrol src/turtle_Pcontrol.cpp)
+target_link_libraries(turtle_Pcontrol ${catkin_LIBRARIES})
