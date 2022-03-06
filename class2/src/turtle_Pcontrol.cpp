@@ -97,9 +97,9 @@ int main(int argc, char **argv)
   	// declare publisher & subscriber
 
 	// turtle subscriber
-  	ros::Subscriber turtle_sub = n.subscribe<turtlesim::Pose>("/turtlesim/turtle/pose", 1, turtle_cb); 
+  	ros::Subscriber turtle_sub = n.subscribe<turtlesim::Pose>("/turtlesim/turtle1/pose", 1, turtle_cb); 
 
-	turtle_pub = n.advertise<geometry_msgs::Twist>("/turtlesim/turtle/cmd_vel",1);
+	turtle_pub = n.advertise<geometry_msgs::Twist>("/turtlesim/turtle1/cmd_vel",1);
 		
 	// define turtle goal point
 
