@@ -61,16 +61,16 @@ def quad_sim(x_c, y_c, z_c):
     pitch = 0
     yaw = 0
     
-    eul_angle = np.array([[0],[0],[0]]); 
-    angular_vel = np.array([[0], [0] , [0]]);
+    eul_angle = np.array([[0],[0],[0]])
+    angular_vel = np.array([[0], [0] , [0]])
     
     # desire yaw angle
     des_yaw = 0
 
     # desire angular velocity, we want the quadcopter to avoid rotating
-    des_yaw_rate = 0;
-    des_roll_rate = 0;
-    des_pitch_rate = 0;
+    des_yaw_rate = 0
+    des_roll_rate = 0
+    des_pitch_rate = 0
     
     # time initialize
     dt = 0.1
@@ -160,12 +160,12 @@ def quad_sim(x_c, y_c, z_c):
             # equation (2) in week4
             
             angular_acc = (np.linalg.inv(J)) @ (total_moment_real - vec_cross(eul_angle, np.matmul(J,eul_angle)));
-            angular_vel = angular_vel + angular_acc*dt;
+            angular_vel = angular_vel + angular_acc*dt
             eul_angle = eul_angle + angular_vel*dt
             
-            roll = eul_angle[0];
-            pitch = eul_angle[1];
-            yaw = eul_angle[2];
+            roll = eul_angle[0]
+            pitch = eul_angle[1]
+            yaw = eul_angle[2]
             
             # get the rotation matrix from roll, pitch, yaw angle
             R = rotation_matrix(roll, pitch, yaw)

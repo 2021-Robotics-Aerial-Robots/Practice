@@ -72,9 +72,9 @@ def quad_sim(x_c, y_c, z_c):
     des_yaw = 0
 
     # desire angular velocity, we want the quadcopter to avoid rotating
-    des_yaw_rate = 0;
-    des_roll_rate = 0;
-    des_pitch_rate = 0;
+    des_yaw_rate = 0
+    des_roll_rate = 0
+    des_pitch_rate = 0
     
     # time initialize
     dt = 0.1
@@ -100,8 +100,8 @@ def quad_sim(x_c, y_c, z_c):
             des_z_acc = calculate_acceleration(z_c[i], t)
 
             
-            des_roll =  0; 
-            des_pitch = 0;
+            des_roll =  0
+            des_pitch = 0
             
             
             # Checkpoint4:  Please define the error term here !

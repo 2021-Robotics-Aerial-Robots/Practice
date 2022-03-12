@@ -40,7 +40,12 @@ class Quadrotor():
                                            [     ,      ,      ,      ]])    
         '''
 
-        
+                
+        self.allocation_matrix = np.array([[1 ,1, 1, 1],
+                                           [self.L1, -self.L1 ,-self.L1 ,self.L1],
+                                           [-self.L2 ,-self.L2 ,self.L2 ,self.L2], 
+                                           [self.cf, -self.cf, self.cf, -self.cf]])
+
         self.invallocation_matrix = np.linalg.inv(self.allocation_matrix)
         
         self.show_animation = show_animation
@@ -77,8 +82,11 @@ class Quadrotor():
         roll = self.roll
         pitch = self.pitch
         yaw = self.yaw
-        return 0 
-    
+   
+        return np.array(
+        [[cos(yaw) * cos(pitch), -sin(yaw) * cos(roll) + cos(yaw) * sin(pitch) * sin(roll), sin(yaw) * sin(roll) + cos(yaw) * sin(pitch) * cos(roll), x],
+         [sin(yaw) * cos(pitch), cos(yaw) * cos(roll) + sin(yaw) * sin(pitch)* sin(roll), -cos(yaw) * sin(roll) + sin(yaw) * sin(pitch) * cos(roll), y],
+         [-sin(pitch), cos(pitch) * sin(roll), cos(pitch) * cos(yaw), z] ])
     '''
     Checkpoint2 :   Please define the rotation matrix here :  Body frame -> Inertia frame
     Hint : week4 slide p.43
