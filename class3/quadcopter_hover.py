@@ -66,7 +66,7 @@ def quad_sim(x_c, y_c, z_c):
     yaw = 0
     
     eul_angle = np.array([[0],[0],[0]]); 
-    angular_vel = np.array([[0], [0] , [0]]);
+    angular_vel = np.array([[0], [0] , [0]])
     
     # desire yaw angle
     des_yaw = 0
@@ -95,6 +95,7 @@ def quad_sim(x_c, y_c, z_c):
 
             des_z_pos = calculate_position(z_c[i], t)
             des_z_vel = calculate_velocity(z_c[i], t)
+
             des_x_acc = calculate_acceleration(x_c[i], t)
             des_y_acc = calculate_acceleration(y_c[i], t)
             des_z_acc = calculate_acceleration(z_c[i], t)
@@ -104,7 +105,7 @@ def quad_sim(x_c, y_c, z_c):
             des_pitch = 0
             
             
-            # Checkpoint4:  Please define the error term here !
+            # Checkpoint3:  Please define the error term here !
             
             '''
             # position error  (z)
@@ -125,7 +126,7 @@ def quad_sim(x_c, y_c, z_c):
             
             '''
 
-            # Checkpoint5:  Please design your controller here !    
+            # Checkpoint4:  Please design your controller here !    
             
             '''
             # translation controller

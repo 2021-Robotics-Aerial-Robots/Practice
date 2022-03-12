@@ -91,18 +91,19 @@ def quad_sim(x_c, y_c, z_c):
             
             des_z_pos = calculate_position(z_c[i], t)
             des_z_vel = calculate_velocity(z_c[i], t)
+            
             des_x_acc = calculate_acceleration(x_c[i], t)
             des_y_acc = calculate_acceleration(y_c[i], t)
             des_z_acc = calculate_acceleration(z_c[i], t)
             
-            # Checkpoint6 :  Please define the desire roll and pitch angle (Hint: it depands on the acceleration of x, y )
+            # Checkpoint5 :  Please define the desire roll and pitch angle (Hint: it depands on the acceleration of x, y )
             
             '''
             des_roll = 
             des_pitch = 
             '''
 
-            # Checkpoint4 :   Please define the error term here !
+            # Checkpoint3 :   Please define the error term here !
             
             '''
             # position error  (z)
@@ -123,7 +124,7 @@ def quad_sim(x_c, y_c, z_c):
             
             '''
 
-            # Checkpoint5 :  Please design your controller here !    
+            # Checkpoint4 :  Please design your controller here !    
             
             '''
             # translation controller
