@@ -104,6 +104,9 @@ def quad_sim(x_c, y_c, z_c):
             des_roll =  0
             des_pitch = 0
             
+            roll_rate = angular_vel[0]
+            pitch_rate = angular_vel[1]
+            yaw_rate = angular_vel[2]
             
             # Checkpoint3:  Please define the error term here !
             
