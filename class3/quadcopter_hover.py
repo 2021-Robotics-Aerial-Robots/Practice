@@ -158,12 +158,12 @@ def quad_sim(x_c, y_c, z_c):
             # equation (2) in week4
             
             angular_acc = (np.linalg.inv(J)) @ (total_moment_real - vec_cross(eul_angle, np.matmul(J,eul_angle)));
-            angular_vel = angular_vel + angular_acc*dt;
+            angular_vel = angular_vel + angular_acc*dt
             eul_angle = eul_angle + angular_vel*dt
             
-            roll = eul_angle[0];
-            pitch = eul_angle[1];
-            yaw = eul_angle[2];
+            roll = eul_angle[0]
+            pitch = eul_angle[1]
+            yaw = eul_angle[2]
             
             # get the rotation matrix from roll, pitch, yaw angle
             R = rotation_matrix(roll, pitch, yaw)

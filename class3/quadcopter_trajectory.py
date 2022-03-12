@@ -62,7 +62,7 @@ def quad_sim(x_c, y_c, z_c):
     yaw = 0
     
     eul_angle = np.array([[0],[0],[0]])
-    angular_vel = np.array([[0], [0] , [0]])
+    angular_vel = np.array([[0],[0],[0]])
     
     # desire yaw angle
     des_yaw = 0
@@ -102,8 +102,6 @@ def quad_sim(x_c, y_c, z_c):
             des_pitch = 
             '''
 
-            
-            
             # Checkpoint4 :   Please define the error term here !
             
             '''
