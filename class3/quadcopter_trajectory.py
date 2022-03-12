@@ -96,6 +96,10 @@ def quad_sim(x_c, y_c, z_c):
             des_y_acc = calculate_acceleration(y_c[i], t)
             des_z_acc = calculate_acceleration(z_c[i], t)
             
+            roll_rate = angular_vel[0]
+            pitch_rate = angular_vel[1]
+            yaw_rate = angular_vel[2]
+            
             # Checkpoint5 :  Please define the desire roll and pitch angle (Hint: it depands on the acceleration of x, y )
             
             '''
