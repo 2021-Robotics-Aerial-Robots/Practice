@@ -1,4 +1,4 @@
-function [R_d] = LinearOptimization(P_after, Np, P_origin)
+function [R_d] = LinearOptimization(P_lo, Np, P_origin)
 
     
     % We have the relation P_after = R_d * P_origin, but we should
